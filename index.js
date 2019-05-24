@@ -1,7 +1,5 @@
 var request = require('request');
-const dotenv = require('dotenv');
-dotenv.config();
-
+var APIPATH = 'http://www.omdbapi.com/?apikey=74024a2';
 const readLine = require('readline').createInterface({
   input: process.stdin,
   output: process.stdout
@@ -12,7 +10,7 @@ var printLine = function(n)
     console.log(Array(n).fill('-').join(' '));
 }
 var movie = process.argv[2]
-request(`${process.env.APIPATH}&t=${movie}`, function (error, response, body) {
+request(`${APIPATH}&t=${movie}`, function (error, response, body) {
   if(error)
   {
     printLine(40);
