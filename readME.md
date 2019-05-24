@@ -38,6 +38,6 @@ Example : npm start Titanic
 For re-run the application
 
 ```bash
-node index.js
+npm start YourMovieName
 ```
 
