@@ -31,8 +31,9 @@ cd MovieFinder
 
 ```bash
 npm install
-node index.js
+npm start YourMovieName
 ```
+Example : npm start Titanic 
 
 For re-run the application
 
