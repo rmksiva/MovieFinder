@@ -11,9 +11,8 @@ var printLine = function(n)
 {
     console.log(Array(n).fill('-').join(' '));
 }
-
-readLine.question("Enter a Movie Name : ", function(movie) {
-  request(`${process.env.APIPATH}&t=${movie}`, function (error, response, body) {
+var movie = process.argv[2]
+request(`${process.env.APIPATH}&t=${movie}`, function (error, response, body) {
   if(error)
   {
     printLine(40);
@@ -40,6 +39,5 @@ readLine.question("Enter a Movie Name : ", function(movie) {
         printLine(40);
     }
   }
-  });
-  readLine.close();
 });
+  
